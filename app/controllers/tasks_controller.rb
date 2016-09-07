@@ -3,10 +3,10 @@ class TasksController < ApplicationController
 		@task = Task.new
 	end
 
-	def create
-		@task = Task.create(task_params)
-		redirect_to_root_path
-	end
+    def create
+      @task = Task.create(task_params)
+      @tasks = Task.all
+    end
 	
 	private
 	def task_params
