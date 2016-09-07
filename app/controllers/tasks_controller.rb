@@ -1,7 +1,8 @@
 class TasksController < ApplicationController
-	def new
-		@task = Task.new
-	end
+    def new
+      @task = Task.new
+      render :show_form
+    end
 
     def create
       @task = Task.create(task_params)
@@ -16,6 +17,7 @@ class TasksController < ApplicationController
 
     def edit
       @task = Task.find(params[:id])
+      render :show_form
     end
 
 	private
