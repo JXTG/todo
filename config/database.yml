@@ -11,15 +11,15 @@ default: &default
 
 development:
   <<: *default
-  database: jx_dev_pg
+  database: db/development.pg
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: jx_test_pg
+  database: db/test.pg
 
 production:
   <<: *default
-  database: jx_production_pg
+  database: db/production.pg
